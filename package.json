@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": " sass --watch C:/Openclassrooms-cours/projet-3/Ohmyfood/css:C:/Openclassrooms-cours/projet-3/Ohmyfood/css"
+    "sass": " sass -w C:/Openclassrooms-cours/P3_DARI_Khadija/Khadija-DARI_3_23032021/css:C:/Openclassrooms-cours/P3_DARI_Khadija/Khadija-DARI_3_23032021/css "
   },
   "keywords": [],
   "author": "",
