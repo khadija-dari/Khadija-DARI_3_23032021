@@ -28,6 +28,42 @@ a {
   color: black;
 }
 
+.class1 {
+  animation-delay: 100ms;
+}
+
+.class2 {
+  animation-delay: 200ms;
+}
+
+.class3 {
+  animation-delay: 300ms;
+}
+
+.class4 {
+  animation-delay: 400ms;
+}
+
+.class5 {
+  animation-delay: 500ms;
+}
+
+.class6 {
+  animation-delay: 600ms;
+}
+
+.class7 {
+  animation-delay: 700ms;
+}
+
+.class8 {
+  animation-delay: 800ms;
+}
+
+.class9 {
+  animation-delay: 900ms;
+}
+
 /* start section discover*/
 .section-discover__position {
   background-color: #e9e9e9;

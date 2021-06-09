@@ -15,3 +15,8 @@ a {
   text-decoration: none;
   color: black;
 }
+@for $i from 1 through 9 {
+  .class#{$i} {
+    animation-delay: 100ms * $i;
+  }
+}
