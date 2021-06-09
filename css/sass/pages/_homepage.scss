@@ -11,6 +11,11 @@
     }
   }
   &__reservation {
+    h1,
+    p {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
     @extend %flex-center;
     flex-direction: column;
     @extend %text;
@@ -25,7 +30,7 @@
       @extend %flex-center;
       flex-direction: column;
       border: solid 1px $basic-color;
-      border-radius: 15px;
+      @include border-red(15px);
       width: 400px;
       margin: 15px auto;
       padding: 15px 10px;
@@ -34,6 +39,7 @@
       position: relative;
       &:hover {
         background-color: lighten($Primarycolor, 30%);
+        border-color: lighten($Primarycolor, 30%);
         i {
           color: $Primarycolor;
         }
@@ -53,7 +59,7 @@
           top: 50%;
           left: -15px;
           margin-top: -11px;
-          border-radius: 50%;
+          @include border-red(50%);
           color: $basic-color;
           background-color: $Primarycolor;
           @extend %text;
@@ -68,7 +74,7 @@
           top: 50%;
           left: -15px;
           margin-top: -11px;
-          border-radius: 50%;
+          @include border-red(50%);
           color: $basic-color;
           background-color: $Primarycolor;
           @extend %text;
@@ -83,7 +89,7 @@
           top: 50%;
           left: -15px;
           margin-top: -11px;
-          border-radius: 50%;
+          @include border-red(50%);
           color: $basic-color;
           background-color: $Primarycolor;
           @extend %text;
@@ -104,6 +110,7 @@
 /* start section restaurants*/
 .section-rests {
   background-color: $backgroundcolor-one;
+  padding-bottom: 20px;
   h2 {
     padding-top: 50px;
     margin-bottom: 0;
@@ -133,12 +140,13 @@
       box-shadow: 0px 5px 8px 0 #d9d9d9;
       position: relative;
       overflow: hidden;
+      cursor: pointer;
       &__img {
         object-fit: cover;
         width: 100%;
         height: 70%;
-        border-radius: 10px 10px 0 0;
-        transition: 0.5s;
+        @include border-red(10px 10px 0 0);
+        @include transition(0.5s);
         &:hover {
           transform: scaleX(1.2);
           -webkit-transform: scaleX(1.2);
@@ -153,7 +161,8 @@
           font-size: 30px;
           right: 6%;
           bottom: 10%;
-          transition: 300ms ease-in-out;
+          @include transition(300ms linear);
+          cursor: pointer;
         }
         .anim {
           z-index: -1;
@@ -161,17 +170,13 @@
           background-clip: text;
           -webkit-background-clip: text;
           color: transparent;
-          transition: transform 300ms ease-in-out;
+          @include transition(transform 300ms ease-in-out);
           transform: scaleY(0);
           -webkit-transform: scaleY(0);
           -moz-transform: scaleY(0);
           -ms-transform: scaleY(0);
           -o-transform: scaleY(0);
           transform-origin: bottom;
-          -webkit-transition: transform 300ms ease-in-out;
-          -moz-transition: transform 300ms ease-in-out;
-          -ms-transition: transform 300ms ease-in-out;
-          -o-transition: transform 300ms ease-in-out;
         }
         &:hover {
           .heart {
@@ -184,11 +189,7 @@
             -moz-transform: scaleY(1);
             -ms-transform: scaleY(1);
             -o-transform: scaleY(1);
-            transition: 2s;
-            -webkit-transition: 2s;
-            -moz-transition: 2s;
-            -ms-transition: 2s;
-            -o-transition: 2s;
+            @include transition(2s);
           }
         }
       }

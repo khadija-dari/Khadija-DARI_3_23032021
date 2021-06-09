@@ -4,13 +4,9 @@ button {
   background-image: linear-gradient(to bottom, #ff93e1, #a16be0);
   margin-top: 25px;
   padding: 15px 25px;
-  border-radius: 30px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  -o-border-radius: 30px;
-  box-shadow: 1px 7px 6px 0 #dadada;
-  transition-duration: 1.5s;
+  @include border-red(30px);
+  @include transition-duration(1.5s);
+  cursor: pointer;
   &:hover {
     box-shadow: 0px 0px 6px 6px #d5d5d5;
     opacity: 0.5;
