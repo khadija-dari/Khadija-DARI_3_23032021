@@ -148,11 +148,12 @@
         @include border-red(10px 10px 0 0);
         @include transition(0.5s);
         &:hover {
-          transform: scaleX(1.2);
-          -webkit-transform: scaleX(1.2);
-          -moz-transform: scaleX(1.2);
-          -ms-transform: scaleX(1.2);
-          -o-transform: scaleX(1.2);
+          @include scale(1.2, 1);
+          // transform: scaleX(1.2);
+          // -webkit-transform: scaleX(1.2);
+          // -moz-transform: scaleX(1.2);
+          // -ms-transform: scaleX(1.2);
+          // -o-transform: scaleX(1.2);
         }
       }
       &__icon {

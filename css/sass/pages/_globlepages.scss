@@ -2,6 +2,10 @@
 body {
   margin: 0;
 }
+.bloc-page {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 h1 {
   font-family: "Shrikhand", cursive;
@@ -15,8 +19,16 @@ a {
   text-decoration: none;
   color: black;
 }
-@for $i from 1 through 9 {
-  .class#{$i} {
-    animation-delay: 100ms * $i;
+// @for $i from 1 through 9 {
+//   .class#{$i} {
+//     animation-delay: 100ms * $i;
+//   }
+// }
+@keyframes anim {
+  from {
+    margin-top: -50px;
+  }
+  to {
+    margin-top: 0;
   }
 }

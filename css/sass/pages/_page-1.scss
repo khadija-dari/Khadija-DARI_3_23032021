@@ -1,82 +1,78 @@
-div {
-  .banner {
+.section {
+  &__banner {
+    position: relative;
     img {
       object-fit: cover;
       height: 300px;
       width: 100%;
       margin-top: 20px;
-      position: relative;
       @include min-tablette {
-        height: calc(100vh - 72px);
+        height: 50vw;
+      }
+      @include min-desktop {
+        height: 20vw;
       }
     }
-    // &::after {
-    //   content: "";
-    //   width: 100%;
-    //   height: 20px;
-    //   background-color: $backgroundcolor-one;
-    //   position: absolute;
-    // }
+    &::after {
+      content: "";
+      width: 100%;
+      height: 40px;
+      background-color: $backgroundcolor-one;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      @include border-red(30px 30px 0 0);
+    }
   }
-}
-.section {
-  h1 {
-    font-size: x-large;
-    margin-left: 20px;
-  }
-
   &__menu {
     background-color: $backgroundcolor-one;
-    // position: absolute;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    top: 40%;
-    &--icon {
-      i {
-        position: absolute;
+    &__title {
+      position: relative;
+      h1 {
         font-size: 30px;
-        right: 6%;
-        top: 25px;
-        @include transition(300ms linear);
-        cursor: pointer;
+        margin-left: 20px;
+        margin-top: 0;
       }
-      .anim {
-        z-index: -1;
-        background-image: linear-gradient($Primarycolor, $Secondarycolor);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        @include transition(transform 300ms ease-in-out);
-        transform: scaleY(0);
-        -webkit-transform: scaleY(0);
-        -moz-transform: scaleY(0);
-        -ms-transform: scaleY(0);
-        -o-transform: scaleY(0);
-        transform-origin: bottom;
-      }
-      &:hover {
-        .heart {
-          color: white;
+      &--icon {
+        i {
+          position: absolute;
+          font-size: 30px;
+          right: 6%;
+          top: 15%;
+          @include transition(300ms linear);
+          cursor: pointer;
         }
         .anim {
-          z-index: 1;
-          transform: scaleY(1);
-          -webkit-transform: scaleY(1);
-          -moz-transform: scaleY(1);
-          -ms-transform: scaleY(1);
-          -o-transform: scaleY(1);
-          @include transition(2s);
+          z-index: -1;
+          background-image: linear-gradient($Primarycolor, $Secondarycolor);
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+          @include transition(transform 300ms ease-in-out);
+          @include scale(1, 0);
+          transform-origin: bottom;
+        }
+        &:hover {
+          .heart {
+            color: white;
+          }
+          .anim {
+            z-index: 1;
+            @include scale(1, 1);
+            @include transition(2s);
+          }
         }
       }
     }
+
     &__select {
       h2 {
         font-size: 30px;
         position: relative;
         margin-left: 20px;
         font-weight: 100;
-        font-size: x-large;
         &::after {
           content: "";
           width: 50px;
@@ -100,14 +96,6 @@ div {
         animation-name: anim;
         animation-duration: 1000ms;
         animation-timing-function: ease;
-        @keyframes anim {
-          from {
-            margin-top: -50px;
-          }
-          to {
-            margin-top: 0;
-          }
-        }
         &:hover {
           .price {
             margin-right: 10px;
@@ -118,6 +106,7 @@ div {
             padding: 20px;
           }
           i {
+            // @include rotate(#{-360deg});
             transform: rotate(-360deg);
             -webkit-transform: rotate(-360deg);
             -moz-transform: rotate(-360deg);
@@ -143,7 +132,6 @@ div {
           display: flex;
           &--price {
             display: flex;
-            // margin-right: -50px;
             margin-bottom: 20px;
             align-items: flex-end;
             font-weight: bold;
@@ -165,10 +153,42 @@ div {
           min-width: 180px;
         }
       }
+      @include min-tablette {
+        margin: auto;
+        width: 400px;
+      }
     }
-  }
-  button {
-    display: flex;
-    margin: 60px auto;
+    .btn {
+      flex-basis: 100%;
+      @extend %flex-center;
+      button {
+        margin: 20px 0 60px;
+      }
+    }
+    @include min-tablette {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      &__title {
+        flex-basis: 100%;
+      }
+      h2 {
+        display: flex;
+        justify-content: center;
+        &::after {
+          left: 17%;
+          width: 200px;
+        }
+      }
+      button {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    // @include min-mobile {
+    //   &__select {
+    //     flex-basis: 45%;
+    //   }
+    // }
   }
 }

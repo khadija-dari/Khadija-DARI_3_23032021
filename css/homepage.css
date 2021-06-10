@@ -13,6 +13,11 @@ body {
   margin: 0;
 }
 
+.bloc-page {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 h1 {
   font-family: "Shrikhand", cursive;
 }
@@ -28,42 +33,14 @@ a {
   color: black;
 }
 
-.class1 {
-  animation-delay: 100ms;
+@keyframes anim {
+  from {
+    margin-top: -50px;
+  }
+  to {
+    margin-top: 0;
+  }
 }
-
-.class2 {
-  animation-delay: 200ms;
-}
-
-.class3 {
-  animation-delay: 300ms;
-}
-
-.class4 {
-  animation-delay: 400ms;
-}
-
-.class5 {
-  animation-delay: 500ms;
-}
-
-.class6 {
-  animation-delay: 600ms;
-}
-
-.class7 {
-  animation-delay: 700ms;
-}
-
-.class8 {
-  animation-delay: 800ms;
-}
-
-.class9 {
-  animation-delay: 900ms;
-}
-
 /* start section discover*/
 .section-discover__position {
   background-color: #e9e9e9;
@@ -229,11 +206,11 @@ a {
   -o-transition: 0.5s;
 }
 .section-rests__cards__card__img:hover {
-  transform: scaleX(1.2);
-  -webkit-transform: scaleX(1.2);
-  -moz-transform: scaleX(1.2);
-  -ms-transform: scaleX(1.2);
-  -o-transform: scaleX(1.2);
+  -moz-transform: scale(1.2, 1);
+  -o-transform: scale(1.2, 1);
+  -ms-transform: scale(1.2, 1);
+  -webkit-transform: scale(1.2, 1);
+  transform: scale(1.2, 1);
 }
 .section-rests__cards__card__icon i {
   position: absolute;
