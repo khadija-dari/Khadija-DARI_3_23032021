@@ -1,0 +1,189 @@
+.section {
+  &__banner {
+    position: relative;
+    img {
+      object-fit: cover;
+      height: 300px;
+      width: 100%;
+      margin-top: 20px;
+      @include min-tablette {
+        height: 50vw;
+      }
+      @include min-desktop {
+        height: 20vw;
+      }
+    }
+    &::after {
+      content: "";
+      width: 100%;
+      height: 40px;
+      background-color: $backgroundcolor-one;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      @include border-red(30px 30px 0 0);
+    }
+  }
+  &__menu {
+    background-color: $backgroundcolor-one;
+    display: flex;
+    flex-direction: column;
+    &__title {
+      position: relative;
+      h1 {
+        font-size: 30px;
+        margin-left: 20px;
+        margin-top: 0;
+      }
+      &--icon {
+        i {
+          position: absolute;
+          font-size: 30px;
+          right: 6%;
+          top: 15%;
+          @include transition(300ms linear);
+          cursor: pointer;
+        }
+        .anim {
+          z-index: -1;
+          background-image: linear-gradient($Primarycolor, $Secondarycolor);
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+          @include transition(transform 300ms ease-in-out);
+          @include scale(1, 0);
+          transform-origin: bottom;
+        }
+        &:hover {
+          .heart {
+            color: white;
+          }
+          .anim {
+            z-index: 1;
+            @include scale(1, 1);
+            @include transition(2s);
+          }
+        }
+      }
+    }
+
+    &__select {
+      h2 {
+        font-size: 30px;
+        position: relative;
+        margin-left: 20px;
+        font-weight: 100;
+        &::after {
+          content: "";
+          width: 50px;
+          height: 5px;
+          position: absolute;
+          left: 0;
+          bottom: -10px;
+          background-color: $Tertiarycolor;
+        }
+      }
+      &__item {
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        margin-bottom: 20px;
+        background-color: $basic-color;
+        box-shadow: 1px 7px 6px 0 #dadada;
+        border-radius: 20px;
+        overflow: hidden;
+        animation-name: anim;
+        animation-duration: 1000ms;
+        animation-timing-function: ease;
+        &:hover {
+          .price {
+            margin-right: 10px;
+            margin-left: 10px;
+          }
+          .anim {
+            z-index: 1;
+            padding: 20px;
+          }
+          i {
+            // @include rotate(#{-360deg});
+            transform: rotate(-360deg);
+            -webkit-transform: rotate(-360deg);
+            -moz-transform: rotate(-360deg);
+            -ms-transform: rotate(-360deg);
+            -o-transform: rotate(-360deg);
+          }
+        }
+        h3 {
+          margin-left: 10px;
+          margin-bottom: 1px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+        p {
+          margin-left: 10px;
+          margin-top: 0;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+        &__animation {
+          display: flex;
+          &--price {
+            display: flex;
+            margin-bottom: 20px;
+            align-items: flex-end;
+            font-weight: bold;
+          }
+          &--anim {
+            @extend %flex-center;
+            z-index: -1;
+            background-color: $Tertiarycolor;
+            @include transition(300ms);
+            transition-property: padding;
+          }
+          i {
+            @include transition(400ms);
+            color: $basic-color;
+            font-size: 25px;
+          }
+        }
+        &__desc {
+          min-width: 180px;
+        }
+      }
+      @include min-tablette {
+        margin: auto;
+        width: 400px;
+      }
+    }
+    .btn {
+      flex-basis: 100%;
+      @extend %flex-center;
+      button {
+        margin: 20px 0 60px;
+      }
+    }
+    @include min-tablette {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      &__title {
+        flex-basis: 100%;
+      }
+      h2 {
+        display: flex;
+        justify-content: center;
+        &::after {
+          left: 17%;
+          width: 200px;
+        }
+      }
+      button {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
