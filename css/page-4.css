@@ -29,12 +29,54 @@ a {
   color: black;
 }
 
+.class1 {
+  animation-delay: 400ms;
+}
+
+.class2 {
+  animation-delay: 800ms;
+}
+
+.class3 {
+  animation-delay: 1200ms;
+}
+
+.class4 {
+  animation-delay: 1600ms;
+}
+
+.class5 {
+  animation-delay: 2000ms;
+}
+
+.class6 {
+  animation-delay: 2400ms;
+}
+
+.class7 {
+  animation-delay: 2800ms;
+}
+
+.class8 {
+  animation-delay: 3200ms;
+}
+
+.class9 {
+  animation-delay: 3600ms;
+}
+
+.class10 {
+  animation-delay: 4000ms;
+}
+
 @keyframes anim {
-  from {
-    margin-top: -50px;
+  0% {
+    margin-top: -20px;
+    opacity: 0;
   }
-  to {
+  100% {
     margin-top: 0;
+    opacity: 1;
   }
 }
 .header__logo {
@@ -167,8 +209,11 @@ a {
   border-radius: 20px;
   overflow: hidden;
   animation-name: anim;
-  animation-duration: 1000ms;
+  animation-duration: 4s;
   animation-timing-function: ease;
+  animation-direction: normal;
+  opacity: 0;
+  animation-fill-mode: both;
 }
 .section__menu__select__item:hover .price {
   margin-right: 10px;
@@ -177,6 +222,8 @@ a {
 .section__menu__select__item:hover .anim {
   z-index: 1;
   padding: 20px;
+  margin-right: 0;
+  margin-left: 0;
 }
 .section__menu__select__item:hover i {
   transform: rotate(-360deg);
@@ -217,6 +264,8 @@ a {
   -ms-transition: 300ms;
   -o-transition: 300ms;
   transition-property: padding;
+  margin-right: -41px;
+  margin-left: 20px;
 }
 .section__menu__select__item__animation i {
   transition: 400ms;

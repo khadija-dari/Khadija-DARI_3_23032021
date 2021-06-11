@@ -33,12 +33,54 @@ a {
   color: black;
 }
 
+.class1 {
+  animation-delay: 400ms;
+}
+
+.class2 {
+  animation-delay: 800ms;
+}
+
+.class3 {
+  animation-delay: 1200ms;
+}
+
+.class4 {
+  animation-delay: 1600ms;
+}
+
+.class5 {
+  animation-delay: 2000ms;
+}
+
+.class6 {
+  animation-delay: 2400ms;
+}
+
+.class7 {
+  animation-delay: 2800ms;
+}
+
+.class8 {
+  animation-delay: 3200ms;
+}
+
+.class9 {
+  animation-delay: 3600ms;
+}
+
+.class10 {
+  animation-delay: 4000ms;
+}
+
 @keyframes anim {
-  from {
-    margin-top: -50px;
+  0% {
+    margin-top: -20px;
+    opacity: 0;
   }
-  to {
+  100% {
     margin-top: 0;
+    opacity: 1;
   }
 }
 /* start section discover*/

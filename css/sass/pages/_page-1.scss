@@ -94,8 +94,12 @@
         border-radius: 20px;
         overflow: hidden;
         animation-name: anim;
-        animation-duration: 1000ms;
+        animation-duration: 4s;
         animation-timing-function: ease;
+        animation-direction: normal;
+        // @include transition(0s);
+        opacity: 0;
+        animation-fill-mode: both;
         &:hover {
           .price {
             margin-right: 10px;
@@ -104,6 +108,8 @@
           .anim {
             z-index: 1;
             padding: 20px;
+            margin-right: 0;
+            margin-left: 0;
           }
           i {
             // @include rotate(#{-360deg});
@@ -142,6 +148,8 @@
             background-color: $Tertiarycolor;
             @include transition(300ms);
             transition-property: padding;
+            margin-right: -41px;
+            margin-left: 20px;
           }
           i {
             @include transition(400ms);
