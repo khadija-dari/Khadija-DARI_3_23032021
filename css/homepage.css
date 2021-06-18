@@ -18,6 +18,10 @@ body {
   margin-right: auto;
 }
 
+i {
+  color: #777777;
+}
+
 h1 {
   font-family: "Shrikhand", cursive;
 }
@@ -33,57 +37,35 @@ a {
   color: black;
 }
 
-.class1 {
-  animation-delay: 400ms;
-}
-
-.class2 {
-  animation-delay: 800ms;
-}
-
-.class3 {
-  animation-delay: 1200ms;
-}
-
-.class4 {
-  animation-delay: 1600ms;
-}
-
-.class5 {
-  animation-delay: 2000ms;
-}
-
-.class6 {
-  animation-delay: 2400ms;
-}
-
-.class7 {
-  animation-delay: 2800ms;
-}
-
-.class8 {
-  animation-delay: 3200ms;
-}
-
-.class9 {
-  animation-delay: 3600ms;
-}
-
-.class10 {
-  animation-delay: 4000ms;
-}
-
-@keyframes anim {
-  0% {
-    margin-top: -20px;
-    opacity: 0;
-  }
-  100% {
-    margin-top: 0;
-    opacity: 1;
-  }
-}
 /* start section discover*/
+.loading {
+  position: fixed;
+  background-color: #f6f6f6;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  font-family: "Shrikhand", cursive;
+  font-size: 45px;
+  font-weight: 400;
+  letter-spacing: 7px;
+  animation: accueil 5s linear both;
+  -webkit-animation: accueil 5s linear both;
+}
+.loading div {
+  background-image: linear-gradient(#9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  padding: 2px;
+  animation-name: logo;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
 .section-discover__position {
   background-color: #e9e9e9;
   box-shadow: inset 0px 4px 3px 0 #d5d5d5;
@@ -131,7 +113,6 @@ a {
 .section-discover__fonctionnement__item i {
   position: absolute;
   left: 40px;
-  color: #777777;
   font-size: 20px;
 }
 .section-discover__fonctionnement__item--one::after {
@@ -198,6 +179,7 @@ a {
 .section-rests {
   background-color: #f6f6f6;
   padding-bottom: 20px;
+  margin-top: 80px;
 }
 .section-rests h2 {
   padding-top: 50px;
@@ -285,7 +267,7 @@ a {
   transform-origin: bottom;
 }
 .section-rests__cards__card__icon:hover .heart {
-  color: white;
+  color: #f6f6f6;
 }
 .section-rests__cards__card__icon:hover .anim {
   z-index: 1;
@@ -305,10 +287,12 @@ a {
   width: 60px;
   padding: 10px;
   background-color: #99e2d0;
+  color: #1b6150;
   z-index: 1;
   position: absolute;
   right: 2%;
   top: 6%;
+  font-family: "Roboto", sans-serif;
 }
 @media (min-width: 992px) {
   .section-rests__cards__card {
@@ -352,6 +336,130 @@ button:hover {
   opacity: 0.5;
 }
 
+.class1 {
+  animation-delay: 400ms;
+}
+
+.class2 {
+  animation-delay: 800ms;
+}
+
+.class3 {
+  animation-delay: 1200ms;
+}
+
+.class4 {
+  animation-delay: 1600ms;
+}
+
+.class5 {
+  animation-delay: 2000ms;
+}
+
+.class6 {
+  animation-delay: 2400ms;
+}
+
+.class7 {
+  animation-delay: 2800ms;
+}
+
+.class8 {
+  animation-delay: 3200ms;
+}
+
+.class9 {
+  animation-delay: 3600ms;
+}
+
+.class10 {
+  animation-delay: 4000ms;
+}
+
+.lettre1 {
+  animation-delay: 40ms;
+}
+
+.lettre2 {
+  animation-delay: 80ms;
+}
+
+.lettre3 {
+  animation-delay: 120ms;
+}
+
+.lettre4 {
+  animation-delay: 160ms;
+}
+
+.lettre5 {
+  animation-delay: 200ms;
+}
+
+.lettre6 {
+  animation-delay: 240ms;
+}
+
+.lettre7 {
+  animation-delay: 280ms;
+}
+
+.lettre8 {
+  animation-delay: 320ms;
+}
+
+.lettre9 {
+  animation-delay: 360ms;
+}
+
+.lettre10 {
+  animation-delay: 400ms;
+}
+
+@keyframes anim {
+  0% {
+    margin-top: -20px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+@keyframes accueil {
+  0% {
+    opacity: 1;
+    z-index: 2;
+  }
+  95% {
+    opacity: 1;
+    z-index: 2;
+  }
+  100% {
+    opacity: 0;
+    z-index: -2;
+  }
+}
+@keyframes logo {
+  10% {
+    color: #99e2d0;
+    text-shadow: none;
+    -moz-transform: translateY(-20px);
+    -o-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  55% {
+    color: #9356dc;
+    text-shadow: 0 0 7px #9356dc;
+  }
+  100% {
+    color: #ff79da;
+    opacity: 0.4;
+    text-shadow: 0 0 7px #ff79da;
+  }
+}
 .footer {
   background-color: #353535;
   height: 270px;
@@ -374,6 +482,7 @@ button:hover {
 }
 .footer__container__links i {
   margin-right: 10px;
+  color: #fff;
 }
 @media (min-width: 768px) {
   .footer__container {

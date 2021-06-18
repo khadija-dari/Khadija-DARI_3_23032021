@@ -1,0 +1,50 @@
+@for $i from 1 through 10 {
+  .class#{$i} {
+    animation-delay: 400ms * $i;
+  }
+}
+@for $i from 1 through 10 {
+  .lettre#{$i} {
+    animation-delay: 40ms * $i;
+  }
+}
+@keyframes anim {
+  0% {
+    margin-top: -20px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+@keyframes accueil {
+  0% {
+    opacity: 1;
+    z-index: 2;
+  }
+  95% {
+    opacity: 1;
+    z-index: 2;
+  }
+  100% {
+    opacity: 0;
+    z-index: -2;
+  }
+}
+@keyframes logo {
+  10% {
+    color: $Tertiarycolor;
+    text-shadow: none;
+    @include transform(translateY(-20px));
+  }
+  55% {
+    color: $Primarycolor;
+    text-shadow: 0 0 7px $Primarycolor;
+  }
+  100% {
+    color: $Secondarycolor;
+    opacity: 0.4;
+    text-shadow: 0 0 7px $Secondarycolor;
+  }
+}

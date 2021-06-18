@@ -1,4 +1,32 @@
 /* start section discover*/
+.loading {
+  position: fixed;
+  background-color: $backgroundcolor-one;
+  width: 100%;
+  height: 100%;
+  background-color: $basic-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  font-family: "Shrikhand", cursive;
+  font-size: 45px;
+  font-weight: 400;
+  letter-spacing: 7px;
+  animation: accueil 5s linear both;
+  -webkit-animation: accueil 5s linear both;
+  div {
+    background-image: linear-gradient($Primarycolor, $Secondarycolor);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    padding: 2px;
+    animation-name: logo;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+}
+
 .section-discover {
   &__position {
     @extend %flex-center;
@@ -47,7 +75,6 @@
       i {
         position: absolute;
         left: 40px;
-        color: darken($backgroundcolor-one, 50%);
         font-size: 20px;
       }
       &--one {
@@ -111,6 +138,7 @@
 .section-rests {
   background-color: $backgroundcolor-one;
   padding-bottom: 20px;
+  margin-top: 80px;
   h2 {
     padding-top: 50px;
     margin-bottom: 0;
@@ -149,11 +177,6 @@
         @include transition(0.5s);
         &:hover {
           @include scale(1.2, 1);
-          // transform: scaleX(1.2);
-          // -webkit-transform: scaleX(1.2);
-          // -moz-transform: scaleX(1.2);
-          // -ms-transform: scaleX(1.2);
-          // -o-transform: scaleX(1.2);
         }
       }
       &__icon {
@@ -181,7 +204,7 @@
         }
         &:hover {
           .heart {
-            color: white;
+            color: $backgroundcolor-one;
           }
           .anim {
             z-index: 1;
@@ -200,10 +223,12 @@
           width: 60px;
           padding: 10px;
           background-color: $Tertiarycolor;
+          color: darken($Tertiarycolor, 50%);
           z-index: 1;
           position: absolute;
           right: 2%;
           top: 6%;
+          font-family: "Roboto", sans-serif;
         }
       }
       @include min-tablette {
