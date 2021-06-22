@@ -6,3 +6,15 @@
 %text {
   text-align: center;
 }
+%num-after {
+  position: absolute;
+  width: 30px;
+  height: 22px;
+  top: 50%;
+  left: -15px;
+  margin-top: -11px;
+  @include border-red(50%);
+  color: $basic-color;
+  background-color: $Primarycolor;
+  @extend %text;
+}

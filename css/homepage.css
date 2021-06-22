@@ -1,12 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
-.header, .section-rests__cards, .section-discover__fonctionnement__item, .section-discover__reservation, .section-discover__position {
+.header, .section-rests__cards, .section-discover__fonctionnement__item, .section-discover__reservation, .section-discover__position, .loading {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.section-discover__fonctionnement__item--three::after, .section-discover__fonctionnement__item--tow::after, .section-discover__fonctionnement__item--one::after, .section-discover__reservation {
+.section-discover__reservation, .section-discover__fonctionnement__item--three::after, .section-discover__fonctionnement__item--tow::after, .section-discover__fonctionnement__item--one::after {
   text-align: center;
+}
+
+.section-discover__fonctionnement__item--three::after, .section-discover__fonctionnement__item--tow::after, .section-discover__fonctionnement__item--one::after {
+  position: absolute;
+  width: 30px;
+  height: 22px;
+  top: 50%;
+  left: -15px;
+  margin-top: -11px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  color: #fff;
+  background-color: #9356dc;
 }
 
 body {
@@ -16,10 +32,6 @@ body {
 .bloc-page {
   margin-left: auto;
   margin-right: auto;
-}
-
-i {
-  color: #777777;
 }
 
 h1 {
@@ -44,9 +56,6 @@ a {
   width: 100%;
   height: 100%;
   background-color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   z-index: 1;
   font-family: "Shrikhand", cursive;
   font-size: 45px;
@@ -85,8 +94,25 @@ a {
   margin-left: 15px;
   margin-right: 15px;
 }
+@media (min-width: 992px) {
+  .section-discover__fonctionnement {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 20px;
+  }
+}
 .section-discover__fonctionnement h2 {
   margin-left: 20px;
+}
+@media (min-width: 992px) {
+  .section-discover__fonctionnement h2 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+  }
 }
 .section-discover__fonctionnement__item {
   flex-direction: column;
@@ -103,6 +129,9 @@ a {
   box-shadow: 0px 5px 8px 0 #d9d9d9;
   position: relative;
 }
+.section-discover__fonctionnement__item i {
+  color: #777777;
+}
 .section-discover__fonctionnement__item:hover {
   background-color: #e4d5f6;
   border-color: #e4d5f6;
@@ -117,51 +146,12 @@ a {
 }
 .section-discover__fonctionnement__item--one::after {
   content: "1";
-  position: absolute;
-  width: 30px;
-  height: 22px;
-  top: 50%;
-  left: -15px;
-  margin-top: -11px;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  color: #fff;
-  background-color: #9356dc;
 }
 .section-discover__fonctionnement__item--tow::after {
   content: "2";
-  position: absolute;
-  width: 30px;
-  height: 22px;
-  top: 50%;
-  left: -15px;
-  margin-top: -11px;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  color: #fff;
-  background-color: #9356dc;
 }
 .section-discover__fonctionnement__item--three::after {
   content: "3";
-  position: absolute;
-  width: 30px;
-  height: 22px;
-  top: 50%;
-  left: -15px;
-  margin-top: -11px;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  color: #fff;
-  background-color: #9356dc;
 }
 @media (max-width: 767px) {
   .section-discover__fonctionnement__item {
@@ -169,8 +159,8 @@ a {
   }
 }
 @media (min-width: 992px) {
-  .section-discover__fonctionnement h2 {
-    text-align: center;
+  .section-discover__fonctionnement__item {
+    width: 290px;
   }
 }
 
@@ -209,6 +199,10 @@ a {
   margin: 20px auto 0 auto;
   border: solid 1px #fff;
   border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
   box-shadow: 0px 5px 8px 0 #d9d9d9;
   position: relative;
   overflow: hidden;
@@ -247,6 +241,7 @@ a {
   -ms-transition: 300ms linear;
   -o-transition: 300ms linear;
   cursor: pointer;
+  color: #777777;
 }
 .section-rests__cards__card__icon .anim {
   z-index: -1;
@@ -259,11 +254,11 @@ a {
   -moz-transition: transform 300ms ease-in-out;
   -ms-transition: transform 300ms ease-in-out;
   -o-transition: transform 300ms ease-in-out;
-  transform: scaleY(0);
-  -webkit-transform: scaleY(0);
-  -moz-transform: scaleY(0);
-  -ms-transform: scaleY(0);
-  -o-transform: scaleY(0);
+  -moz-transform: scale(1, 0);
+  -o-transform: scale(1, 0);
+  -ms-transform: scale(1, 0);
+  -webkit-transform: scale(1, 0);
+  transform: scale(1, 0);
   transform-origin: bottom;
 }
 .section-rests__cards__card__icon:hover .heart {

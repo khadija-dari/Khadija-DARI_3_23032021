@@ -43,6 +43,7 @@
           top: 15%;
           @include transition(300ms linear);
           cursor: pointer;
+          color: darken($backgroundcolor-one, 50%);
         }
         .anim {
           z-index: -1;
@@ -56,7 +57,7 @@
         }
         &:hover {
           .heart {
-            color: white;
+            color: $backgroundcolor-one;
           }
           .anim {
             z-index: 1;
